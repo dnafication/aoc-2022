@@ -23,7 +23,6 @@
  * Win = 6
  * Draw = 3
  * Lose = 0
- *
  */
 
 // import the input file
@@ -84,6 +83,8 @@ console.log(`Total score: ${totalScore}`)
 
 /**
  * Part 2
+ *
+ * Decision to make
  * X = lose the game
  * Y = draw the game
  * Z = win the game
@@ -121,9 +122,9 @@ const calculateScore2 = (game) => {
   const myShapeScore = shapeScore[myShape]
   const score = myShapeScore + scoreLookup[`${opponentShape}${myShape}`]
 
-  console.log(
-    `Opponent: ${opponentShape}, My choice: ${myShape}, My score: ${score}`
-  )
+  // console.log(
+  //   `Opponent: ${opponentShape}, My choice: ${myShape}, My score: ${score}`
+  // )
   return score
 }
 

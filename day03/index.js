@@ -11,6 +11,7 @@ const rucksacks = input.split('\n')
 
 // lower case alphabets
 const lcAlphabets = 'abcdefghijklmnopqrstuvwxyz'
+// upper case alphabets
 const ucAlphabets = lcAlphabets.toUpperCase()
 const calculatePriority = (letter) => {
   if (lcAlphabets.includes(letter)) {
@@ -25,7 +26,6 @@ const findCommonLetters = (rucksack) => {
   const letterCount = letters.length
   const compartment1 = letters.slice(0, letterCount / 2)
   const compartment2 = letters.slice(letterCount / 2, letterCount)
-  // find the common letters
   const commonLetters = compartment1.filter((letter) =>
     compartment2.includes(letter)
   )
@@ -47,7 +47,6 @@ for (let i = 0; i < rucksacks.length; i += 3) {
   chunkedRucksacks.push(rucksacks.slice(i, i + 3))
 }
 
-// find common letter in three strings
 const findCommonChars = (strings) => {
   let commonChars = []
   let temp = strings[0]
